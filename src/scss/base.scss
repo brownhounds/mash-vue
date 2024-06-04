@@ -1,0 +1,22 @@
+$blue: #6dc5d1;
+$orange-light: #fde49e;
+$orange: #f19a01;
+$orange-dark: #dd761c;
+$text: #505050;
+$red: #aa0000;
+
+@mixin mouse-memoirs-regular {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin eliminated {
+    color: $red;
+    text-decoration: line-through;
+}
+
+@mixin current {
+    border: 2px solid $red;
+    background-color: lighten($red, 65);
+}
