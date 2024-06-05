@@ -1,3 +1,9 @@
-# Mash with: Vue 3 + TypeScript + Vite
+# Game Of Mash
 
-Nothing to see here
+![alt text](https://github.com/brownhounds/mash-vue/blob/main/screenshot.png?raw=true)
+
+Run it locally:
+
+```bash
+npm i && npm run dev
+```
