@@ -20,7 +20,7 @@ export class Eliminator {
                 for (const item of activeItems) {
                     this.deselectPreviousItem();
                     item.current = true;
-                    await this.delay(200);
+                    await this.delay(150);
                     this.eliminateItem(item);
                     this.tickCount++;
                     this.previousItem = item;

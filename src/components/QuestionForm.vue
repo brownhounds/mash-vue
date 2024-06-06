@@ -39,6 +39,7 @@ const title = computed(() => getCategoryDescription(category));
 @import '../scss/base.scss';
 
 .container {
+    display: block;
     margin-bottom: 24px;
 }
 
