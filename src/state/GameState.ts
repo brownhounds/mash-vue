@@ -52,16 +52,8 @@ export class GameState {
         return this.model.get(Categories.MASH)!;
     }
 
-    public getResults() {
-        return {
-            MASH: this.findActiveItem(Categories.MASH),
-            LIFE_PARTNER: this.findActiveItem(Categories.LIFE_PARTNER),
-            NUMBER_OF_KIDS: this.findActiveItem(Categories.NUMBER_OF_KIDS),
-            JOB: this.findActiveItem(Categories.JOB),
-            PET: this.findActiveItem(Categories.PET),
-            CAR: this.findActiveItem(Categories.CAR),
-            LOCATION: this.findActiveItem(Categories.LOCATION),
-        };
+    public getResults(category: CategoriesType): string {
+        return this.findActiveItem(category)?.value || 'Value Not Found';
     }
 
     public isModelValid(): boolean {

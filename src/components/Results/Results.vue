@@ -4,21 +4,26 @@ import Header from '../Header.vue';
 import Layout from '../Layout.vue';
 import Result from './Result.vue';
 
+import { Categories } from '../../state/categories';
 import { state } from '../../state/state';
-const results = state.game.getResults();
+const { game } = state;
 </script>
 
 <template>
     <Layout>
         <Header label="Results" />
         <p>
-            You will marry <Result :label="results.LIFE_PARTNER?.value" />. You
-            will live in a <Result :label="results.MASH?.value" /> in
-            <Result :label="results.LOCATION?.value" />. You will have
-            <Result :label="results.NUMBER_OF_KIDS?.value" /> children and you
-            will drive a <Result :label="results.CAR?.value" /> and be a
-            <Result :label="results.JOB?.value" />. Your pet will be
-            <Result :label="results.PET?.value" /> .
+            You will marry
+            <Result :label="game.getResults(Categories.LIFE_PARTNER)" />. You
+            will live in a
+            <Result :label="game.getResults(Categories.MASH)" /> in
+            <Result :label="game.getResults(Categories.LOCATION)" />. You will
+            have
+            <Result :label="game.getResults(Categories.NUMBER_OF_KIDS)" />
+            children and you will drive a
+            <Result :label="game.getResults(Categories.CAR)" /> and be a
+            <Result :label="game.getResults(Categories.JOB)" />. Your pet will
+            be <Result :label="game.getResults(Categories.PET)" /> .
         </p>
         <Button label="Finish" @click="state.newGame()" />
     </Layout>
