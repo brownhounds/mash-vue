@@ -29,7 +29,7 @@ const onNext = (): void => {
                 />
             </template>
         </div>
-        <Button label="Next" @click="onNext()" :disabled="!isValid" />
+        <Button label="Continue" @click="onNext()" :disabled="!isValid" />
         <ValidationError :is-valid="isValid" />
     </Layout>
 </template>

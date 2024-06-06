@@ -60,6 +60,6 @@ export const categoriesInitialValues = {
         'Paris, France',
         'New York City, USA',
         'Tokyo, Japan',
-        'An igloo in the middle of Antarctica',
+        'In the middle of Antarctica',
     ],
 };

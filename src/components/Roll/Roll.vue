@@ -11,7 +11,7 @@ const {
 } = state;
 
 const roll = (): void => {
-    eliminator.eliminatorFactor = Math.floor(Math.random() * 13) + 3;
+    eliminator.eliminatorFactor = Math.floor(Math.random() * (13 - 3 + 1)) + 3;
 };
 </script>
 
@@ -24,6 +24,6 @@ const roll = (): void => {
             label="Continue"
             @click="state.game.nextScene()"
         />
-        <Button label="Roll Your Lucky Number" v-else @click="roll()" />
+        <Button label="Roll 🎲" v-else @click="roll()" />
     </Layout>
 </template>
